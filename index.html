@@ -129,10 +129,10 @@
     left: 7.2rem;
   }
   .num3 {
-    left: 11.8rem;
+    left: 11.7rem;
   }
   .num4 {
-    left: 16.5rem;
+    left: 16.2rem;
   }
 
 
@@ -147,16 +147,15 @@
   }
   setRem();
   window.onresize = setRem;
-  let oldArr = []
-
-  let speed = 30
-
-  setInterval(() => {
-    // document.querySelectorAll('ul').forEach( (item, index) => {
-    //   // item.style.
-    // })
-  }, 100);
-
-
+  document.querySelectorAll('ul').forEach( (item, index) => {
+    setTImeOutFun(item)
+  })
+  function setTImeOutFun(item) {
+    let random = (Math.ceil(Math.random() * 4) + 1) * 500;
+    item.style.animationDuration = random / 1000 + 's'
+    setTimeout(() => {
+      setTImeOutFun(item)
+    }, random);
+  }
 </script>
 </html>
