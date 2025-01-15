@@ -271,8 +271,8 @@ setInterval(() => {
   // })
  document.querySelectorAll('ul').forEach( (item, index) => {
     item.style.animationName = ''
-    if(oldArr[index] === numArr[index] || ( numArr[index] ===4 &&  oldArr[index] === 10)) {
-      numArr[index] = Math.ceil(Math.random() * 10)
+    if(oldArr[index] == numArr[index]) {
+      numArr[index] = numArr[index] * 2 % 10;
     }
     item.setAttribute('class', `ul${oldArr[index] || 0}`)
     setTimeout(() => {
