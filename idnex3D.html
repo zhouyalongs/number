@@ -265,9 +265,6 @@ let oldArr = []
 setInterval(() => {
   let num = Math.ceil(Math.random() * 10000) + 1;
   let numArr = num.toString().split('');
-  // document.querySelectorAll('.num').forEach( item => {
-  //   item.style.backgroundImage = `url(./images/${numArr.shift() || 0}.png)`;
-  // })
  document.querySelectorAll('ul').forEach( (item, index) => {
     item.style.animationName = ''
     if(oldArr[index] == numArr[index]) {
