@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>number</title>
+</head>
+<body>
+  <div class="box">
+    <div class="num num1">
+      <ul>
+        <li><img src="./images/0.png" alt=""></li>
+        <li><img src="./images/1.png" alt=""></li>
+        <li><img src="./images/2.png" alt=""></li>
+        <li><img src="./images/3.png" alt=""></li>
+        <li><img src="./images/4.png" alt=""></li>
+        <li><img src="./images/5.png" alt=""></li>
+        <li><img src="./images/6.png" alt=""></li>
+        <li><img src="./images/7.png" alt=""></li>
+        <li><img src="./images/8.png" alt=""></li>
+        <li><img src="./images/9.png" alt=""></li>
+      </ul>
+    </div>
+    <div class="num num2">
+      <ul>
+        <li><img src="./images/0.png" alt=""></li>
+        <li><img src="./images/1.png" alt=""></li>
+        <li><img src="./images/2.png" alt=""></li>
+        <li><img src="./images/3.png" alt=""></li>
+        <li><img src="./images/4.png" alt=""></li>
+        <li><img src="./images/5.png" alt=""></li>
+        <li><img src="./images/6.png" alt=""></li>
+        <li><img src="./images/7.png" alt=""></li>
+        <li><img src="./images/8.png" alt=""></li>
+        <li><img src="./images/9.png" alt=""></li>
+      </ul>
+    </div>
+    <div class="num num3">
+      <ul>
+        <li><img src="./images/0.png" alt=""></li>
+        <li><img src="./images/1.png" alt=""></li>
+        <li><img src="./images/2.png" alt=""></li>
+        <li><img src="./images/3.png" alt=""></li>
+        <li><img src="./images/4.png" alt=""></li>
+        <li><img src="./images/5.png" alt=""></li>
+        <li><img src="./images/6.png" alt=""></li>
+        <li><img src="./images/7.png" alt=""></li>
+        <li><img src="./images/8.png" alt=""></li>
+        <li><img src="./images/9.png" alt=""></li>
+      </ul>
+    </div>
+    <div class="num num4">
+      <ul>
+        <li><img src="./images/0.png" alt=""></li>
+        <li><img src="./images/1.png" alt=""></li>
+        <li><img src="./images/2.png" alt=""></li>
+        <li><img src="./images/3.png" alt=""></li>
+        <li><img src="./images/4.png" alt=""></li>
+        <li><img src="./images/5.png" alt=""></li>
+        <li><img src="./images/6.png" alt=""></li>
+        <li><img src="./images/7.png" alt=""></li>
+        <li><img src="./images/8.png" alt=""></li>
+        <li><img src="./images/9.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</body>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+  }
+  .box {
+    width: 100%;
+    height: 16.6rem;
+    background: url(./images/bg.gif) no-repeat center 100%/100%;
+    position: relative;
+    margin-top: 200px;
+  }
+  .num {
+    /* width: 3.3rem; */
+    /* height: 4.3rem; */
+    height: 6.3rem;
+    position: absolute;
+    /* top: 6.2rem; */
+    top: 4.7rem;
+    /* background: url(./images/0.png) no-repeat center 100%/100%; */
+    perspective: 3000px;
+    perspective-origin: 50% 50%;
+    overflow: hidden;
+  }
+  ul {
+    position: relative;
+    top: 1rem;
+    width: 3.3rem;
+    height: 4.3rem;
+    transform-style: preserve-3d;
+    /* overflow: hidden; */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+  li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  li > img {
+    width: 100%;
+    height: 100%;
+    /* background-color: #d9b68b; */
+  }
+
+  .num1 {
+    left: 2.75rem;
+  }
+  .num2 {
+    left: 7.2rem;
+  }
+  .num3 {
+    left: 11.8rem;
+  }
+  .num4 {
+    left: 16.5rem;
+  }
+  ul > li:nth-child(1){
+    transform: rotateX(0deg) translateZ(110px);
+    z-index: 2;
+  }
+  ul > li:nth-child(2){
+    transform: rotateX(-36deg) translateZ(110px);
+    z-index: 1;
+  }
+  ul > li:nth-child(3){
+    transform: rotateX(-72deg) translateZ(110px);
+    z-index: 0;
+  }
+  ul > li:nth-child(4){
+    transform: rotateX(-108deg) translateZ(110px);
+    z-index: -1;
+  }
+  ul > li:nth-child(5){
+    transform: rotateX(-144deg) translateZ(110px);
+    z-index: -2;
+  }
+  ul > li:nth-child(6){
+    transform: rotateX(-180deg) translateZ(110px);
+    z-index: -3;
+  }
+  ul > li:nth-child(7){
+    transform: rotateX(-216deg) translateZ(110px);
+    z-index: -4;
+  }
+  ul > li:nth-child(8){
+    transform: rotateX(-252deg) translateZ(110px);
+    z-index: -5;
+  }
+  ul > li:nth-child(9){
+    transform: rotateX(-288deg) translateZ(110px);
+    z-index: -6;
+  }
+  ul > li:nth-child(10){
+    transform: rotateX(-324deg) translateZ(110px);
+    z-index: -7;
+  }
+
+  .ul0{
+    transform: rotateX(calc(-3 * 360deg));
+  }
+  .ul1 {
+    transform: rotateX(calc(-3 * 360deg + 36deg));
+  }
+  .ul2 {
+      transform: rotateX(calc(-3 * 360deg + 72deg));
+  }
+  .ul3 {
+      transform: rotateX(calc(-3 * 360deg + 108deg));
+  }
+  .ul4 {
+      transform: rotateX(calc(-3 * 360deg + 144deg));
+  }
+  .ul5 {
+      transform: rotateX(calc(-3 * 360deg + 180deg));
+  }
+  .ul6 {
+      transform: rotateX(calc(-3 * 360deg + 216deg));
+  }
+  .ul7 {
+      transform: rotateX(calc(-3 * 360deg + 252deg));
+  }
+  .ul8 {
+      transform: rotateX(calc(-3 * 360deg + 288deg));
+  }
+  .ul9 {
+      transform: rotateX(calc(-3 * 360deg + 324deg));
+  }
+
+  @keyframes num0 {
+    to {
+      transform: rotateX(calc(3 * 360deg));
+    }
+  }
+  @keyframes num1 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 36deg));
+    }
+  }
+  @keyframes num2 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 72deg));
+    }
+  }
+  @keyframes num3 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 108deg));
+    }
+  }
+  @keyframes num4 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 144deg));
+    }
+  }
+  @keyframes num5 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 180deg));
+    }
+  }
+  @keyframes num6 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 216deg));
+    }
+  }
+  @keyframes num7 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 252deg));
+    }
+  }
+  @keyframes num8 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 288deg));
+    }
+  }
+  @keyframes num9 {
+    to {
+      transform: rotateX(calc(3 * 360deg + 324deg));
+    }
+  }
+
+
+</style>
+<script>
+  function setRem() {
+    const baseSize = 16; // 基准字体大小
+    const designWidth = 375; // 设计稿宽度
+    const viewportWidth = document.documentElement.clientWidth || window.innerWidth;
+    const fontSize = viewportWidth / designWidth * baseSize;
+    document.documentElement.style.fontSize = fontSize + 'px';
+}
+setRem();
+window.onresize = setRem;
+let oldArr = []
+setInterval(() => {
+  let num = Math.ceil(Math.random() * 10000) + 1;
+  let numArr = num.toString().split('');
+  console.error(numArr);
+  // document.querySelectorAll('.num').forEach( item => {
+  //   item.style.backgroundImage = `url(./images/${numArr.shift() || 0}.png)`;
+  // })
+ document.querySelectorAll('ul').forEach( (item, index) => {
+    item.style.animationName = ''
+    item.setAttribute('class', `ul${oldArr[index] || 0}`)
+    setTimeout(() => {
+      item.style.animationName = `num${numArr[index] || 0}`;
+    })
+
+  })
+  oldArr = numArr
+}, 3000);
+</script>
+</html>
