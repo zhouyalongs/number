@@ -40,6 +40,7 @@
         <li><img src="./images1/2.png" alt=""></li>
         <li><img src="./images1/1.png" alt=""></li>
         <li><img src="./images1/0.png" alt=""></li>
+        <li><img src="./images1/9.png" alt=""></li>
       </ul>
     </div>
     <div class="num num2">
@@ -75,6 +76,7 @@
         <li><img src="./images1/2.png" alt=""></li>
         <li><img src="./images1/1.png" alt=""></li>
         <li><img src="./images1/0.png" alt=""></li>
+        <li><img src="./images1/9.png" alt=""></li>
       </ul>
     </div>
     <div class="num num3">
@@ -110,6 +112,7 @@
         <li><img src="./images1/2.png" alt=""></li>
         <li><img src="./images1/1.png" alt=""></li>
         <li><img src="./images1/0.png" alt=""></li>
+        <li><img src="./images1/9.png" alt=""></li>
       </ul>
     </div>
     <div class="num num4">
@@ -145,6 +148,7 @@
         <li><img src="./images1/2.png" alt=""></li>
         <li><img src="./images1/1.png" alt=""></li>
         <li><img src="./images1/0.png" alt=""></li>
+        <li><img src="./images1/9.png" alt=""></li>
       </ul>
     </div>
   </div>
@@ -169,7 +173,7 @@
     overflow: hidden;
   }
   ul {
-    transform: translate3d(0, calc(-100% + 5.5rem), 0);
+    transform: translate3d(0, calc(-100% + 9.8rem), 0);
     animation-duration: 4s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
@@ -294,16 +298,31 @@
   window.onresize = setRem;
 
   let oldArr = []
+  let nineCount = 0
+  let allCount = 0
+  start()
   setInterval(() => {
-    let num = Math.ceil(Math.random() * 10000) + 1;
-    let numArr = num.toString().split('');
+    start()
+  }, 5500);
 
-    if(numArr[0] == 9 ){
+  function start(params) {
+    let numArr = [];
+    let num = getRandomWithNineProbability()
+    if(num == 9 ){
       numArr = '9999'.split('')
-    }else if(numArr[0] == 8 ){
+      nineCount++
+    }else if(num == 8 ){
       numArr = '8534'.split('')
-    }else if(numArr[0] == 7 ){
+    }else if(num == 7 ){
       numArr = '7851'.split('')
+    }else {
+      numArr = [num].concat(Math.ceil(Math.random() * 1000).toString().split(''))
+    }
+    allCount++
+    if(allCount == 10 && nineCount < 2) {
+      numArr = '9999'.split('')
+      allCount = 0
+      nineCount = 0
     }
     // else if(oldArr[index] == numArr[index]) {
     //   numArr[index] = numArr[index] * 2 % 10;
@@ -317,6 +336,19 @@
       })
     })
     oldArr = numArr
-  }, 5000);
+  }
+
+  function getRandomWithNineProbability() {
+    // 假设我们希望 9 出现的概率为 20%，可以根据需要调整这个概率值
+    let probabilityOfNine = 2;
+    let random = Math.floor(Math.random() * 10);
+    if (random < probabilityOfNine) {
+      return 9;
+    } else {
+      // 这里可以根据需求生成其他的随机数，例如生成 0 到 8 的随机数
+      return Math.floor(Math.random() * 9);
+    }
+  }
+
 </script>
 </html>
